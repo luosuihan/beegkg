@@ -1,0 +1,50 @@
+.login1{
+    /*width: 300px;
+    height: 500px;
+    position: absolute;
+    top: -50%;
+    left: -50%;*/
+    /*text-align: center;*/
+    /*margin-top: 50px;*/
+    /*transform: translateY(-50%);*/
+    background-color: #5bc0de;
+    width: 400px;
+    height:260px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%,-50%);
+
+}
+body{
+    background: url("../img/rbg.jpg")no-repeat;
+}
+.login2{
+   /* margin-top: 15px;
+    margin-left: 15px;*/
+    margin: 60px;
+}
+.register{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%,-50%);
+    width: 300px;
+    height: 500px;
+    /*text-align: center;*/
+}
+.btn-t{
+   /* margin-left: 60px;*/
+    width: 100px;
+    /*align-content: center;*/
+    /*text-align: center;*/
+}
+.btn-t1{
+    margin-left: 40px;
+}
+.btn-r{
+    width: 280px;
+    height: 35px;
+    font-size: 14px;
+   /*margin-left: 50px;*/
+}

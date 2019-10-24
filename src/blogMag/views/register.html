@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+    <title>文章后台管理系统</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link href="dashboard.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+</head>
+<body>
+<form action="register" method="post" class="register">
+    <div class="form-group">
+        <label for="user" style="display: inline;color: #ffffff;">用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户：</label>
+        <input type="text" class="form-control" style="display: inline;width: 200px" id="user" name="user" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="rpwd" style="display: inline;color: #ffffff;">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+        <input type="text" class="form-control" id="rpwd" style="display: inline;width: 200px" name="rpwd" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="rpwdq" style="display: inline;color: #ffffff;">确认密码：</label>
+        <input type="text" class="form-control" id="rpwdq" style="display: inline;width: 200px" name="rpwdq" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="email" style="display: inline;color: #ffffff;">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</label>
+        <input type="text" class="form-control" id="email" style="display: inline;width: 200px" name="email" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="iphone" style="display: inline;color: #ffffff;">手&nbsp;&nbsp;机&nbsp;号：</label>
+        <input type="text" class="form-control" id="iphone" style="display: inline;width: 200px" name="iphone" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="vfcode" style="display: inline;color: #ffffff;">验&nbsp;&nbsp;证&nbsp;码：</label>
+        <input type="text" class="form-control" id="vfcode" style="display: inline;width: 200px" name="vfcode" autocomplete="off">
+    </div>
+    <button type="submit" class="btn btn-primary btn-sm btn-block btn-r">注册</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 sidebar">
+            <ul class="list-unstyled nav1 nav-sidebar">
+                <li><a href="#" class="a2">文章管理</a></li>
+                <li class="active"><a href="/" class="wzmag a1">文章列表</a></li>
+                <li><a href="addArticle" class="wzmag a1">添加文章</a></li>
+                <li><a href="articleType" class="wzmag a1">文章分类</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">Nav item</a></li>
+                <li><a href="">Nav item again</a></li>
+                <li><a href="">One more nav</a></li>
+                <li><a href="">Another nav item</a></li>
+                <li><a href="">More navigation</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">Nav item again</a></li>
+                <li><a href="">One more nav</a></li>
+                <li><a href="">Another nav item</a></li>
+            </ul>
+        </div>
+        <div class="col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">数据统计图</h1>
+
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                         width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                         width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                         width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                         width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+            </div>
+
+            <h2 class="sub-header">所有文章</h2>
+            <select type="text"
+                    style="width: 120px; height: 26px;border: 1px solid #7fd75a;outline: none; margin: 15px 0 15px 0;text-align: center;align-content: center">
+                {{range .articleList}}
+                    <option value="{{.ArticleType.TypeName}}">{{.ArticleType.TypeName}}</option>
+                {{end}}
+            </select>
+            <div class="table-responsive clearfix">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>文章标题</th>
+                        <th>文章类型</th>
+                        <th>发布时间</th>
+                        <th>阅读量</th>
+                        <th>编辑</th>
+                        <th>删除</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{range .articleList}}
+                        <tr>
+                            <td>{{.Title}}</td>
+                            <td>{{.ArticleType.TypeName}}</td>
+                            <td>{{.Utime}}</td>
+                            <td>{{.Count}}</td>
+                            <td><a style="text-decoration: none" href="#">编辑</a></td>
+                            <td><a style="text-decoration: none" href="#">删除</a></td>
+                        </tr>
+                    {{end}}
+                    </tbody>
+                </table>
+                <!--                <div class="pager">-->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination pager_s">
+                        <li>
+                            <a href="/?pageIndex={{.page | pre}}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                            <li><a href="#">1</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
